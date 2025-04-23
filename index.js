@@ -26,6 +26,7 @@ const jokes = [
   { id: 3, title: "Joke Number 03", body: "Just a Joke Number 03" },
   { id: 4, title: "Joke Number 04", body: "Just a Joke Number 04" },
   { id: 5, title: "Joke Number 05", body: "Just a Joke Number 05" },
+  { id: 6, title: "Human Being", body: "Hello Human Being" },
 ];
 
 app.get("/api/jokes", (req, res) => {
