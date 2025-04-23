@@ -4,20 +4,32 @@ import "dotenv/config";
 const app = express();
 const PORT = process.env.PORT || 3030;
 
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.send("Hello Human Being");
 });
 
-app.get("/instagram", (req, res) => {
+app.get("/api/instagram", (req, res) => {
   res.send("Human Instagram");
 });
 
-app.get("/car", (req, res) => {
+app.get("/api/car", (req, res) => {
   res.send("<h1>Human Car - Gwagon</h1>");
 });
 
-app.get("/phone", (req, res) => {
+app.get("/api/phone", (req, res) => {
   res.send("<h2>Samsung S26</h2>");
+});
+
+const jokes = [
+  { id: 1, title: "Joke Number 01", body: "Just a Joke Number 01" },
+  { id: 2, title: "Joke Number 02", body: "Just a Joke Number 02" },
+  { id: 3, title: "Joke Number 03", body: "Just a Joke Number 03" },
+  { id: 4, title: "Joke Number 04", body: "Just a Joke Number 04" },
+  { id: 5, title: "Joke Number 05", body: "Just a Joke Number 05" },
+];
+
+app.get("/api/jokes", (req, res) => {
+  res.send(jokes);
 });
 
 app.listen(PORT, () => {
